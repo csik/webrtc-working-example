@@ -10,13 +10,13 @@ RUN apt-get update && \
     sudo \
 	curl \
     nano \
-    python3-pip \
-    python3.8-venv \ 
-    python3.8-dev  && \
+    python3.9-pip \
+    python3.9-venv \ 
+    python3.9-dev  && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 
 EXPOSE 7000
 
 WORKDIR /web/
-CMD python3 -m http.server 7000 & sleep infinity
+CMD python3.9 -m http.server 7000 & sleep infinity

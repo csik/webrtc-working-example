@@ -10,9 +10,9 @@ RUN apt-get update && \
     sudo \
 	curl \
     nano \
-    python3-pip \
-    python3.8-venv \ 
-    python3.8-dev  && \
+    python3.9-pip \
+    python3.9-venv \ 
+    python3.9-dev  && \
     apt-get -y autoremove && \
     rm -rf /var/lib/apt/lists/*
 
@@ -21,4 +21,4 @@ RUN pip3 install -r /signaling/requirements.txt
 
 EXPOSE 9999
 
-CMD python3 /signaling/server.py & sleep infinity
+CMD python3.9 /signaling/server.py & sleep infinity
